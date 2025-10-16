@@ -4,18 +4,18 @@ git clone https://github.com/MyrelleDAMAS/PROJETOPHP.git
 cd projetophp
 ```
 
-## Verificando o PHP
+# Verificando o PHP
 ```
 php -v
 ```
 
-- Se não tiver PHP instalado:
+### Se não tiver PHP instalado:
  ```
 sudo apt update
 sudo apt install php -y
 ```
 
-### Instalando o Apache (se não estiver)
+# Instalando o Apache (se não estiver)
 ```
 sudo apt update
 sudo apt install apache2 libapache2-mod-php -y
@@ -23,22 +23,22 @@ sudo systemctl enable apache2 --now
 sudo systemctl status apache2
 ```
 
-#### Criando pasta do projeto no Apache
+# Criando pasta do projeto no Apache
 ```
 sudo mkdir -p /var/www/projetophp
 sudo cp -r ~/projetophp/* /var/www/projetophp/
 ```
 
-##### Configurando porta personalizada no Apache
+# Configurando porta personalizada no Apache
 ```
-* Edita ports.conf
+### Edita ports.conf
 sudo nano /etc/apache2/ports.conf
 
-* Adiciona no final:
+### Adiciona no final:
 /*#*/ Porta adicional para o projeto PHP
 Listen 8094
 
-* Cria VirtualHost para o projeto
+### Cria VirtualHost para o projeto
 sudo nano /etc/apache2/sites-available/projetophp.conf
 
 *Conteudo:*
