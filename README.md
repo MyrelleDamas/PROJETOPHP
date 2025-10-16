@@ -32,16 +32,20 @@ sudo cp -r ~/projetophp/* /var/www/projetophp/
 # Configurando porta personalizada no Apache
 ```
 ### Edita ports.conf
+```
 sudo nano /etc/apache2/ports.conf
+```
 
 ### Adiciona no final:
+```
 /*#*/ Porta adicional para o projeto PHP
 Listen 8094
+```
 
 ### Cria VirtualHost para o projeto
+```
 sudo nano /etc/apache2/sites-available/projetophp.conf
 
-*Conteudo:*
 <VirtualHost *:PORTA>
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/projetophp
@@ -50,8 +54,10 @@ sudo nano /etc/apache2/sites-available/projetophp.conf
     ErrorLog ${APACHE_LOG_DIR}/projetophp-error.log
     CustomLog ${APACHE_LOG_DIR}/projetophp-access.log combined
 </VirtualHost>
+```
 
-* Ativa o site e reinicia o Apache
+### Ativa o site e reinicia o Apache
+ ```
 sudo a2ensite projetophp.conf
 sudo systemctl reload apache2
 sudo systemctl status apache2
