@@ -10,8 +10,10 @@ php -v
 ```
 
 - Se não tiver PHP instalado:
+ ```
 sudo apt update
 sudo apt install php -y
+```
 
 # Instalando o Apache (se não estiver)
 ```
