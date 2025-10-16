@@ -1,27 +1,34 @@
 # Subindo um Projeto PHP no Linux com Apache
-- Clonando o projeto
-cd ~
+```
 git clone https://github.com/MyrelleDAMAS/PROJETOPHP.git
 cd projetophp
+```
 
 # Verificando o PHP
+```
 php -v
+```
 
 - Se não tiver PHP instalado:
 sudo apt update
 sudo apt install php -y
 
 # Instalando o Apache (se não estiver)
+```
 sudo apt update
 sudo apt install apache2 libapache2-mod-php -y
 sudo systemctl enable apache2 --now
 sudo systemctl status apache2
+```
 
 # Criando pasta do projeto no Apache
+```
 sudo mkdir -p /var/www/projetophp
 sudo cp -r ~/projetophp/* /var/www/projetophp/
+```
 
 # Configurando porta personalizada no Apache
+```
 a) Edita ports.conf
 sudo nano /etc/apache2/ports.conf
 
@@ -46,3 +53,4 @@ c) Ativa o site e reinicia o Apache
 sudo a2ensite projetophp.conf
 sudo systemctl reload apache2
 sudo systemctl status apache2
+```
