@@ -30,8 +30,7 @@ sudo cp -r ~/projetophp/* /var/www/projetophp/
 ```
 
 # Configurando porta personalizada no Apache
-```
-```
+
 ### Edita ports.conf
 ```
 sudo nano /etc/apache2/ports.conf
