@@ -33,7 +33,7 @@ sudo cp -r ~/projetophp/* /var/www/projetophp/
 
 ### Edita ports.conf
 ```
-sudo nano /etc/apache2/ports.conf
+sudo vi /etc/apache2/ports.conf
 ```
 
 ### Adiciona no final:
